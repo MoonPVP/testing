@@ -1,0 +1,48 @@
+<!-- CSS for styling the button and the circle effect -->
+<style>
+  .dark-gray-button {
+    /* Style the button with a dark gray color */
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+  }
+
+  /* Style the circle that appears on hover */
+  .dark-gray-button:hover .circle {
+    /* Show the circle */
+    display: block;
+    /* Animate the circle by increasing its size and fading it out */
+    animation: circle-animation 0.5s linear forwards;
+  }
+
+  /* The circle is initially hidden */
+  .dark-gray-button .circle {
+    display: none;
+    /* Position the circle at the center of the button */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Set the size and color of the circle */
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Keyframes for the circle animation */
+  @keyframes circle-animation {
+    /* Start with a small, fully opaque circle */
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    /* End with a large, transparent circle */
+    100% {
+      width: 200%;
+      height: 200%;
+      opacity: 0;
+    }
+  }
+</style>
